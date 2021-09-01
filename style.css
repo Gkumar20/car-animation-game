@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+
+#sky{
+    height: 100vh;
+    width: 150vw;
+    position: absolute;
+    background: url(background.jpg) no-repeat center center/cover;
+    animation: skyhil linear 5s infinite;   
+}
+#trees{
+    height: 250vh;
+    width: 300vw;
+    overflow: hidden;
+    background:url(trees.png) repeat-x;
+    position: absolute;
+    background-size: cover;
+    top: -800px;
+    animation: carmove linear 2s infinite;
+}
+#track{
+    height: 43vh;
+    width: 300vw;
+    background: url(track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 71%;
+    animation: carmove linear 1s infinite;
+}
+#car{
+    height: 113px;
+    width: 345px;
+    background: url(car_body.png) no-repeat center center/cover;
+    background-size: cover;
+    position: absolute;
+    bottom: 21vh;
+    left: 25vw;
+    animation: carjump linear 0.5s infinite;
+    animation: flycar  10s infinite;
+}
+.wheel{
+    position: absolute;
+}
+.wheel img{
+    position: relative;
+    height: 79px;
+    width: 73px;
+    animation: wheelmove linear 0.5s infinite;
+}
+
+#tyre1{
+    left: 22px;
+    bottom: -10px;
+}
+#tyre1 img{
+    height: 73px;
+    width: 69px;
+}
+
+#tyre2{
+    left: 223px;
+    bottom: -13%;
+}
+
+@keyframes wheelmove{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carmove{
+    100%{
+        transform: translateX(-500px);
+    }
+}
+@keyframes carjump{
+    50%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+}
+
+@keyframes skyhil{
+   
+    100%{
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes flycar{
+
+    10%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: translateY(-180px) rotate(-20deg);
+    }
+    50%{
+        transform: translateY(-200px) rotate(-5deg);
+    }
+    70%{ rotate(40deg);
+        transform: translateY(-180px) rotate(20deg);
+    }
+    80%{
+        transform: rotate(10deg);
+    }
+    /* 100%{
+        transform: rotate(0deg);
+    } */
+}
